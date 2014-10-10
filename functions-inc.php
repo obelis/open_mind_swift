@@ -459,6 +459,81 @@ function geocoder(){
 
 }
 
+/* map shortcode */
+// [map location="1, 2 , 3 or 4"]
+function home_mini_map( $atts ){
 
+	$a = shortcode_atts( array(
+		'location' => '',
+	), $atts );
+    
+	ob_start();
+	include("/home/obelis/public_html/wp-content/themes/roots/inc/location_variables.php");
+	$address1 = $main_street.', '.$main_city.' '.$main_state.' '.$main_zip;
+	$address2 = ($display_2_location == 1) ? $second_street.', '.$second_city.' '.$second_state.' '.$second_zip : NULL;
+	$address3 = ($display_3_location == 1) ? $third_street.', '.$third_city.' '.$third_state.' '.$third_zip : NULL;
+	$address4 = ($display_4_location == 1) ? $fourth_street.', '.$fourth_city.' '.$fourth_state.' '.$fourth_zip : NULL;
+
+	$lat1 = get_option( 'lat1' );
+	$lon1 = get_option( 'lon1' );
+
+	$lat2 = get_option( 'lat2' );
+	$lon2 = get_option( 'lon2' );
+	
+
+	$lat3 = get_option( 'lat3' );
+	$lon3 = get_option( 'lon3' );
+	
+	$lat4ck = get_option( 'lat4' );
+	$lon4ck = get_option( 'lon4' );
+
+	$lat4 = (isset($lat4ck) && $lat4ck != '' ? $lat4ck : NULL);
+	$lon4 = (isset($lon4ck) && $lon4ck != '' ? $lon4ck : NULL);
+
+	
+	$bubble1 = '[\'<h4>'.$company_name.'</h4><a href=\"https://www.google.com/maps/dir/Current+Location/'.$lon1.','.$lat1.'\"><span style=\"font-weight:bold;\">'.$main_street.'</span><br />'.$main_city.', '.$main_state.' '.$main_zip.'</a>\','.json_encode($lon1).', '.json_encode($lat1).']';
+	$bubble2 = '[\'<h4>'.$company_name.'</h4><a href=\"https://www.google.com/maps/dir/Current+Location/'.$lon2.','.$lat2.'\"><span style=\"font-weight:bold;\">'.$second_street.'</span><br />'.$second_city.', '.$second_state.' '.$second_zip.'</a>\','.json_encode($lon2).', '.json_encode($lat2).']';
+	$bubble3 = '[\'<h4>'.$company_name.'</h4><a href=\"https://www.google.com/maps/dir/Current+Location/'.$lon3.','.$lat3.'\"><span style=\"font-weight:bold;\">'.$third_street.'</span><br />'.$third_city.', '.$third_state.' '.$third_zip.'</a>\','.json_encode($lon3).', '.json_encode($lat3).']';
+	$bubble4 = '[\'<h4>'.$company_name.'</h4><a href=\"https://www.google.com/maps/dir/Current+Location/'.$lon4.','.$lat4.'\"><span style=\"font-weight:bold;\">'.$fourth_street.'</span><br />'.$fourth_city.', '.$fourth_state.' '.$fourth_zip.'</a>\','.json_encode($lon4).', '.json_encode($lat4).']';
+	
+	switch ($a['location']) {
+	  case "1":
+	    $lat = get_option( 'lat1' );
+		$lon = get_option( 'lon1' );
+		$location_select = $bubble1;
+	    break;
+	  case "2":
+		$lat = get_option( 'lat2' );
+		$lon = get_option( 'lon2' );
+	    $location_select = $bubble2;
+	    break;
+	  case "3":
+		$lat = get_option( 'lat3' );
+		$lon = get_option( 'lon3' );
+		$location_select = $bubble3;
+	    break;
+	  case "4":
+		$lat = get_option( 'lat4' );
+		$lon = get_option( 'lon4' );
+		$location_select = $bubble4;
+	    break;
+	  default:
+	    $location_select = $bubble1;
+	    if($display_2_location == 1){ $location_select .= ', '.$bubble2; }
+	    if($display_3_location == 1){ $location_select .= ', '.$bubble3; }
+	    if($display_4_location == 1){ $location_select .= ', '.$bubble4; }
+	    
+	    $map_bounds = "show";
+
+	}
+	
+	
+	include("/home_mini_map.php");    
+	$result = ob_get_contents();
+	ob_end_clean(); 	 
+	return $result;
+}
+
+add_shortcode('map', 'home_mini_map');
 
 ?>
