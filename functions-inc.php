@@ -528,7 +528,7 @@ function home_mini_map( $atts ){
 	}
 	
 	
-	include(get_stylesheet_directory()."/home_mini_map.php");    
+	include(get_stylesheet_directory()."/home_mini_map-geo.php");    
 	$result = ob_get_contents();
 	ob_end_clean(); 	 
 	return $result;
