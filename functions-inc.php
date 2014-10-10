@@ -468,7 +468,7 @@ function home_mini_map( $atts ){
 	), $atts );
     
 	ob_start();
-	include("/location_variables.php");
+	include("location_variables.php");
 	$address1 = $main_street.', '.$main_city.' '.$main_state.' '.$main_zip;
 	$address2 = ($display_2_location == 1) ? $second_street.', '.$second_city.' '.$second_state.' '.$second_zip : NULL;
 	$address3 = ($display_3_location == 1) ? $third_street.', '.$third_city.' '.$third_state.' '.$third_zip : NULL;
@@ -528,7 +528,7 @@ function home_mini_map( $atts ){
 	}
 	
 	
-	include("/home_mini_map.php");    
+	include("home_mini_map.php");    
 	$result = ob_get_contents();
 	ob_end_clean(); 	 
 	return $result;
