@@ -56,7 +56,7 @@ $hash = rand();
 
 
 
-<div id="map<?=$hash;?>" class="map" style="width: 100%; <!-- height: 395px; -->"></div>
+<div id="map<?=$hash;?>" class="map" style="width: 100%; height: 395px;"></div>
 
 
 <script type="text/javascript">
