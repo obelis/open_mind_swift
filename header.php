@@ -176,8 +176,9 @@
                 </li> <!-- dropdown -->
             </ul> <!-- nav nabvar-nav --> */ ?>
             <div id="social-header" class="hidden-xs">
-            <a href="<?php echo of_get_option('om_twitter_user','#'); ?>" class="social-icon soc-twitter animated fadeInDown animation-delay-1"><i class="fa fa-twitter"></i></a>
-            <a href="<?php echo of_get_option('om_facebook_user','#'); ?>" class="social-icon soc-facebook animated fadeInDown animation-delay-3"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/swiftaudiology1" class="social-icon soc-twitter animated fadeInDown animation-delay-1"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.facebook.com/pages/Swift-Audiology-Hearing-Aid-Service/239615506090988" class="social-icon soc-facebook animated fadeInDown animation-delay-3"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.youtube.com/user/SwiftAudiology" class="social-icon soc-youtube animated fadeInDown animation-delay-5"><i class="fa fa-youtube"></i></a>
         </div>
         </div><!-- navbar-collapse -->
     </div> <!-- container -->
