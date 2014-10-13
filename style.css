@@ -70,7 +70,6 @@ iframe {
   background-color: #fff;
   /*margin: 0 auto;
     max-width: 1200px;*/
-
 }
 .no-img img {
   display: none;
@@ -1256,6 +1255,9 @@ a.social-icon:hover {
 .soc-github {
   background-color: #000;
 }
+.soc-youtube {
+  background-color: #f00;
+}
 /*-------------------------------------------------------------------*/
 /* Navbar */
 /*-------------------------------------------------------------------*/
@@ -1425,7 +1427,6 @@ a.social-icon:hover {
 background-color: rgba(0, 0, 0, 0.4);
     padding: 18px
 */
-
 }
 .carousel-list {
   top: 60px;
@@ -2678,5 +2679,5 @@ hr {
   top: 0;
   left: 0;
   width: 100% !important;
-  height: auto% !important;
+  height: 100% !important;
 }
