@@ -356,6 +356,8 @@ function lookup($string){
  
 }
 
+wp_enqueue_script('gmaps', '//maps.googleapis.com/maps/api/js?key=AIzaSyCJIUm-gWhV6ryPy1bqfiCz4cQ1ZuB-okc&sensor=false', array(), null, false);
+
 add_action('optionsframework_after_validate', 'geocoder'); // runs geocoder when business profiles is updated
 $theme = get_template();
 
