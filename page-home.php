@@ -159,21 +159,44 @@
                 <div class="row">
 				<div class="col-md-8">
 				<h2 class="section-title">Our Locations</h2>
-            <?php	include 'home_mini_map.php'; ?>	
+                <?php echo do_shortcode('[map]'); ?>	
                 </div>
 				<div class="col-md-4">
+<?php include 'location_variables.php'; ?>
+<?php // Location HREF Links
+    $location_url_prefix = "/our-location/hearing-aids-";
+    $main_location_url = $location_url_prefix . $main_city . '-' . $main_state . '-' . $main_zip . '/';
+    $main_location_url = strtolower($main_location_url);
+    $second_location_url = $location_url_prefix . $second_city . '-' . $second_state . '-' . $second_zip . '/';
+    $second_location_url = strtolower($second_location_url);
+    $third_location_url = $location_url_prefix . $third_city . '-' . $third_state . '-' . $third_zip . '/';
+    $third_location_url = strtolower($third_location_url);
+?>
+<?php
+function phone_url($phone_number){
+    $phone_number = str_replace("(", "", $phone_number);
+    $phone_number = str_replace(")", "", $phone_number);
+    $phone_number = str_replace("-", "", $phone_number);
+    $phone_number = str_replace(".", "", $phone_number);
+    $phone_number = str_replace(" ", "", $phone_number);
+    return $phone_number;
+}
+$main_phone_url = phone_url($main_phone_number);
+$second_phone_url = phone_url($second_phone_number);
+$third_phone_url = phone_url($third_phone_number);
+?>
 <h2 class="section-title">Call us today</h2>
 <p class="lead">
-    <a href="/our-location/hearing-aids-<?php echo $main_city . '-' . $main_state . '-' . $main_zip; ?>/"><?php echo $main_city . ', ' . $main_state; ?></a><br>
-    <a href="tel:+<?php echo $main_phone_number; ?>"><?php echo $main_phone_number; ?></a>
+    <a href="<?php echo $main_location_url; ?>"><?php echo $main_city . ', ' . $main_state; ?></a><br>
+    <a href="tel:+1<?php echo $main_phone_url; ?>"><?php echo $main_phone_number; ?></a>
 </p>
 <p class="lead">
-    <a href="/our-location/hearing-aids-<?php echo $second_city . '-' . $second_state . '-' . $second_zip; ?>/"><?php echo $second_city . ', ' . $second_state; ?></a><br>
-    <a href="tel:+<?php echo $second_phone_number; ?>"><?php echo $second_phone_number; ?></a>
+    <a href="<?php echo $second_location_url; ?>"><?php echo $second_city . ', ' . $second_state; ?></a><br>
+    <a href="tel:+1<?php echo $main_phone_url; ?>"><?php echo $second_phone_number; ?></a>
 </p>
 <p class="lead">
-    <a href="/our-location/hearing-aids-<?php echo $third_city . '-' . $third_state . '-' . $third_zip; ?>/"><?php echo $third_city . ', ' . $third_state; ?></a><br>
-    <a href="tel:+<?php echo $second_phone_number; ?>"><?php echo $second_phone_number; ?></a>
+    <a href="<?php echo $third_location_url; ?>"><?php echo $third_city . ', ' . $third_state; ?></a><br>
+    <a href="tel:+1<?php echo $main_phone_url; ?>"><?php echo $second_phone_number; ?></a>
 </p>         
 				</div>
                 </div>
