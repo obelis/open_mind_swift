@@ -83,11 +83,11 @@
             <p class="animated fadeInLeft text-center"><?php bloginfo('description'); ?></p>
         </div>
         <section id="header-locations" class="col-sm-6">
-            <h3 class="animated fadeInDown animation-delay-3">Serving the Pittsburgh area<br> 3 Great Locations</h3>
+            <h3 class="animated fadeInDown animation-delay-3">Serving the Pittsburgh Area<br> 3 Great Locations</h3>
             <ul>
-                <li class="animated fadeInRight animation-delay-1"><a href="/our-locations/hearing-aids-pittsburgh-pa-15237/"><?php echo $main_city . ", " . $main_state; ?></a><a href="<?php echo $main_g; ?>" rel="publisher" class="social-icon soc-google-plus"><span class="description">Google+ Main Location</span><span class="fa fa-google-plus"></span></a></li>
-                <li class="animated fadeInRight animation-delay-2"><a href="/our-locations/hearing-aids-mcmurray-pa-15317/"><?php echo $second_city . ", " . $second_state; ?></a><a href="<?php echo $second_g; ?>" rel="publisher" class="social-icon soc-google-plus"><span class="description">Google+ Second Location</span><span class="fa fa-google-plus"></span></a></li>
-                <li class="animated fadeInRight animation-delay-3"><a href="/our-locations/hearing-aids-washington-pa-15301/"><?php echo $third_city . ", " . $third_state; ?></a><a href="<?php echo $third_g; ?>" rel="publisher" class="social-icon soc-google-plus"><span class="description">Google+ Third Location</span><span class="fa fa-google-plus"></span></a></li>
+                <li class="animated fadeInRight animation-delay-1"><a href="/our-locations/hearing-aids-pittsburgh-pa-15237/"><?php echo $main_city . ", " . $main_state; ?></a><a href="<?php echo $main_g; ?>" rel="publisher" class="social-icon soc-google-plus" target="_blank"><span class="description">Google+ Main Location</span><span class="fa fa-google-plus"></span></a></li>
+                <li class="animated fadeInRight animation-delay-2"><a href="/our-locations/hearing-aids-mcmurray-pa-15317/"><?php echo $second_city . ", " . $second_state; ?></a><a href="<?php echo $second_g; ?>" rel="publisher" class="social-icon soc-google-plus" target="_blank"><span class="description">Google+ Second Location</span><span class="fa fa-google-plus"></span></a></li>
+                <li class="animated fadeInRight animation-delay-3"><a href="/our-locations/hearing-aids-washington-pa-15301/"><?php echo $third_city . ", " . $third_state; ?></a><a href="<?php echo $third_g; ?>" rel="publisher" class="social-icon soc-google-plus" target="_blank"><span class="description">Google+ Third Location</span><span class="fa fa-google-plus"></span></a></li>
             </ul>
         </section>
         <?php /* 
@@ -176,9 +176,9 @@
                 </li> <!-- dropdown -->
             </ul> <!-- nav nabvar-nav --> */ ?>
             <div id="social-header" class="hidden-xs">
-            <a href="https://twitter.com/swiftaudiology1" class="social-icon soc-twitter animated fadeInDown animation-delay-1"><i class="fa fa-twitter"></i></a>
-            <a href="https://www.facebook.com/pages/Swift-Audiology-Hearing-Aid-Service/239615506090988" class="social-icon soc-facebook animated fadeInDown animation-delay-3"><i class="fa fa-facebook"></i></a>
-            <a href="https://www.youtube.com/user/SwiftAudiology" class="social-icon soc-youtube animated fadeInDown animation-delay-5"><i class="fa fa-youtube"></i></a>
+            <a href="https://twitter.com/swiftaudiology1" class="social-icon soc-twitter animated fadeInDown animation-delay-1" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.facebook.com/pages/Swift-Audiology-Hearing-Aid-Service/239615506090988" class="social-icon soc-facebook animated fadeInDown animation-delay-3" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.youtube.com/user/SwiftAudiology" class="social-icon soc-youtube animated fadeInDown animation-delay-5" target="_blank"><i class="fa fa-youtube"></i></a>
         </div>
         </div><!-- navbar-collapse -->
     </div> <!-- container -->
