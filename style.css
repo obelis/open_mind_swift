@@ -685,6 +685,14 @@ a.thumbnail.active {
   border-radius: 0;
 }
 /* breadcrumb */
+#breadcrumbs {
+  padding: 0px;
+  margin: 0px;
+}
+#breadcrumbs-background {
+  margin: 5px 0 0 0;
+  background-color: rgba(0, 0, 0, 0.05);
+}
 .breadcrumb {
   display: inline;
   margin: 0;
@@ -858,7 +866,7 @@ img.alignright + p {
   background-color: #eee;
   border-bottom: solid 1px #00718c;
   color: #000;
-  padding: 20px 0;
+  padding: 20px 0 0 0;
   margin-bottom: 30px;
   position: relative;
 }

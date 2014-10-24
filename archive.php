@@ -21,12 +21,13 @@
                 Blog Archive
             <?php } endif; ?>
         </h1>
-
-        <ol class="breadcrumb">
-            <?php if(function_exists('bcn_display_list')) {
-                bcn_display_list();
+    </div>
+    <div id="breadcrumbs-background">
+        <div class="container">
+            <?php if ( function_exists('yoast_breadcrumb') ) {
+                yoast_breadcrumb('<p id="breadcrumbs" class="hidden-xs">','</p>');
             } ?>
-        </ol>
+        </div>
     </div>
 </header>
 
