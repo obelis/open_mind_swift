@@ -192,11 +192,11 @@ $third_phone_url = phone_url($third_phone_number);
 </p>
 <p class="lead">
     <a href="<?php echo $second_location_url; ?>"><?php echo $second_city . ', ' . $second_state; ?></a><br>
-    <a href="tel:+1<?php echo $main_phone_url; ?>"><?php echo $second_phone_number; ?></a>
+    <a href="tel:+1<?php echo $second_phone_url; ?>"><?php echo $second_phone_number; ?></a>
 </p>
 <p class="lead">
     <a href="<?php echo $third_location_url; ?>"><?php echo $third_city . ', ' . $third_state; ?></a><br>
-    <a href="tel:+1<?php echo $main_phone_url; ?>"><?php echo $second_phone_number; ?></a>
+    <a href="tel:+1<?php echo $third_phone_url; ?>"><?php echo $third_phone_number; ?></a>
 </p>         
 				</div>
                 </div>
